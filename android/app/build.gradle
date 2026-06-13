@@ -1,14 +1,15 @@
-apply plugin: 'com.android.application'
-apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
+plugins {
+    id "com.android.application"
+}
 
 android {
-    namespace 'org.roman.flutter_hello'
-    compileSdkVersion 34
+    namespace "org.roman.flutter_hello"
+    compileSdk 34
 
     defaultConfig {
         applicationId "org.roman.flutter_hello"
-        minSdkVersion 21
-        targetSdkVersion 34
+        minSdk 21
+        targetSdk 34
         versionCode 1
         versionName "0.1"
     }
@@ -17,15 +18,11 @@ android {
         release {
             minifyEnabled true
             shrinkResources true
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
         }
     }
 }
 
-flutter {
-    source '../..'
-}
-
 dependencies {
-    implementation 'androidx.core:core:1.12.0'
+    implementation "androidx.core:core:1.12.0"
 }
