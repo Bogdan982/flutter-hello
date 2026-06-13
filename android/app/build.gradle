@@ -1,0 +1,31 @@
+apply plugin: 'com.android.application'
+apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
+
+android {
+    namespace 'org.roman.flutter_hello'
+    compileSdkVersion 34
+
+    defaultConfig {
+        applicationId "org.roman.flutter_hello"
+        minSdkVersion 21
+        targetSdkVersion 34
+        versionCode 1
+        versionName "0.1"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+flutter {
+    source '../..'
+}
+
+dependencies {
+    implementation 'androidx.core:core:1.12.0'
+}
