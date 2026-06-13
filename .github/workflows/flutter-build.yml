@@ -27,3 +27,5 @@ jobs:
         with:
           name: flutter-apk
           path: build/app/outputs/flutter-apk/app-release.apk
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
